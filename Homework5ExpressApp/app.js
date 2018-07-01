@@ -47,20 +47,17 @@ app.use(function(err, req, res, next) {
 });
 
 app.get('/users', async function(req, res){
-  // promise
-// fetch('http://jsonplaceholder.typicode.com/users/')
-//   .then(res => res.json())
-//   .then(json => res.send(json));
+// promise
+//axios.get('http://jsonplaceholder.typicode.com/users/').then(json=>res.send(json.data));
 
 // observables
-// from(fetch('http://jsonplaceholder.typicode.com/users/').then(res => res.json()))
-// .subscribe((json)=> res.send(json));
+// from(axios.get('http://jsonplaceholder.typicode.com/users/'))
+// .subscribe((json)=>res.send(json.data));
 
 // async/await
 
-const res1 = await fetch('http://jsonplaceholder.typicode.com/users/');
-const json = await res1.json();
-res.send(json);
+const res1 = await axios.get('http://jsonplaceholder.typicode.com/users/');
+res.send(res1.data);
 })
 
 module.exports = app;
