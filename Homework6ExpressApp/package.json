@@ -1,0 +1,20 @@
+{
+  "name": "homework6expressapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-validator": "^5.2.0",
+    "helmet": "^3.12.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  }
+}
