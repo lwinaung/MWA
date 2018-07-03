@@ -1,0 +1,39 @@
+{
+    "_id": "11111111",
+    "isbn_num": "0321884493",
+	"tagged_keys": ["node", "js", "javascript"],
+	"title": "Node.js in Action",
+    "author": "Mike",
+    "students": [
+        {
+            "name": "Amy",
+            "email": "amy@mum.edu",
+            "mobile": "1384737282",
+            "borrowed_date": new Date('Oct 31 2017'),
+            "due_date": new Date('Nov 30 2017'),
+            "returned_date": new Date('Nov 30 2017')
+        },
+        {
+            "name": "John",
+            "email": "john@mum.edu",
+            "borrowed_date": new Date('June 30 2018'),
+            "due_date": new Date('July 31 2018')
+        }
+    ]
+}
+{
+    "_id": "11111112",
+    "isbn_num": "1285196147",
+	"title": "Node.js, MongoDB and AngularJS Web Development",
+    "author": "Coronel",
+	"tagged_keys": ["node", "js", "javascript", "mongodb", "angular"],
+    "students": [
+        {
+            "name": "Angel",
+            "email": "angel@mum.edu",
+            "mobile": "1455039204",
+            "borrowed_date": new Date('May 31 2018'),
+            "due_date": new Date('June 30 2017')
+        }
+    ]
+}
