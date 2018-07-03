@@ -1,9 +1,10 @@
 {
     "_id": "11111111",
     "isbn_num": "0321884493",
-	"tagged_keys": ["node", "js", "javascript"],
-	"title": "Node.js in Action",
-    "author": "Mike",
+    "title": "Node.js in Action",
+    "status": "Not Available",
+    "author": ["Mike", "Joe"],
+    "tagged_keys": ["node", "js", "javascript"],
     "students": [
         {
             "name": "Amy",
@@ -24,9 +25,10 @@
 {
     "_id": "11111112",
     "isbn_num": "1285196147",
-	"title": "Node.js, MongoDB and AngularJS Web Development",
-    "author": "Coronel",
-	"tagged_keys": ["node", "js", "javascript", "mongodb", "angular"],
+    "title": "Node.js, MongoDB and AngularJS Web Development",
+    "status": "Available",
+    "author": ["Coronel","Mike"],
+    "tagged_keys": ["node", "js", "javascript", "mongodb", "angular"],
     "students": [
         {
             "name": "Angel",
