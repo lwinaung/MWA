@@ -10,26 +10,20 @@ const crypto = require('crypto');
 const decipher = crypto.createDecipher('aes256', 'asaadsaad');
 
 app.get('/secret', function (req, res) {
-
-
     MongoClient.connect(url, function (err, client) {
         let decrypted = '';
 
         const db = client.db(dbName);
         db.collection('cryptoCol').findOne({}, function (err, doc) {
-            decipher.write(doc.message, 'hex');
-            decipher.end();
-            decipher.on('readable', () => {
-                const data = decipher.read();
-                if (data)
-                    decrypted += data.toString('utf8');
-            });
-            decipher.on('end', () => {
+            const encrypted = doc.message;
+            if (encrypted) {
+                let decrypted = decipher.update(encrypted, 'hex', 'utf8');
+                decrypted += decipher.final('utf8');
                 res.send(decrypted);
-                console.log("Decrypted Data ......." + decrypted);
-                client.close();
-                res.end();
-            });
+                console.log(decrypted);
+            }
+            client.close();
+            res.end();
         });
     })
 })
