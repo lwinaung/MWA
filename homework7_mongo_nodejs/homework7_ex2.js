@@ -11,8 +11,6 @@ const decipher = crypto.createDecipher('aes256', 'asaadsaad');
 
 app.get('/secret', function (req, res) {
     MongoClient.connect(url, function (err, client) {
-        let decrypted = '';
-
         const db = client.db(dbName);
         db.collection('cryptoCol').findOne({}, function (err, doc) {
             const encrypted = doc.message;
