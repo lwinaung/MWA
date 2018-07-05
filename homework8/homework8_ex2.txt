@@ -1,0 +1,3 @@
+db.collectionName.createIndex({title:1, authors:1, isbn:1});  
+
+This is multikey index as authors is an array type. So, the index will work when I find data with one of them (title, authors, isbn).
