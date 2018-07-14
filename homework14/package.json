@@ -1,0 +1,11 @@
+{
+  "name": "mean-angular2-registration-login-example-master",
+  "version": "1.0.0",
+  "description": "MEAN Stack with Angular 2 - User Registration and Login Example & Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lwin",
+  "license": "ISC"
+}
